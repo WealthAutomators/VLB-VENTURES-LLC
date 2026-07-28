@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/container";
 export const metadata = {
   title: "Shop by Category",
   description:
-    "Browse every department at DLKS E-COMM LLC — electronics, home & kitchen, beauty, toys, sports, pet supplies and more.",
+    "Browse every department at VLB VENTURES LLC — electronics, home & kitchen, beauty, toys, sports, pet supplies and more.",
 };
 
 export default function CategoriesPage() {

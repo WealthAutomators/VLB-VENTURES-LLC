@@ -1,21 +1,21 @@
 export const company = {
-  name: "DLKS E-COMM LLC",
-  tagline: "Premium Shopping. Seamlessly Delivered.",
+  name: "VLB VENTURES LLC",
+  tagline: "Elevating Everyday Shopping.",
   description:
-    "DLKS E-COMM LLC is a premium modern marketplace offering curated electronics, home essentials, beauty, fashion, and everyday favorites in one seamless shopping experience.",
-  email: "dlksecommllc@gmail.com",
+    "VLB VENTURES LLC is a modern luxury marketplace curating quality electronics, home essentials, beauty, fashion, and lifestyle products designed for thoughtful everyday living.",
+  email: "vlbventuresllc@gmail.com",
   address: {
-    street: "21 HOWE ST",
-    city: "HUNTINGTON STATION",
-    state: "NY",
-    zip: "11746",
+    street: "405 PITNEY PL",
+    city: "MORRISTOWN",
+    state: "NJ",
+    zip: "07960",
     country: "United States",
   },
   social: {
-    facebook: "https://facebook.com/dlksecommllc",
-    twitter: "https://twitter.com/dlksecommllc",
-    pinterest: "https://pinterest.com/dlksecommllc",
+    facebook: "https://facebook.com/vlbventuresllc",
+    twitter: "https://twitter.com/vlbventuresllc",
+    pinterest: "https://pinterest.com/vlbventuresllc",
   },
   hours: "Mon–Fri: 9am–6pm EST",
-  copyright: `© ${new Date().getFullYear()} DLKS E-COMM LLC. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} VLB VENTURES LLC. All rights reserved.`,
 };

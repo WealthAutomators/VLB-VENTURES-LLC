@@ -11,12 +11,18 @@ export function TrendingProducts() {
   const products = getProductsBySlugs(homepageTrendingSlugs);
 
   return (
-    <section className="bg-muted/40 py-24 md:py-32">
+    <section className="section-muted py-24 md:py-32">
       <Container>
-        <SectionHeading title="Trending Products" viewMoreLink="/shop" />
+        <SectionHeading
+          title="Trending Products"
+          subtitle="Fresh favorites our customers are discovering now."
+          viewMoreLink="/shop"
+        />
         <Carousel slidesToShow={4} className="px-8">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div key={product.id} className="px-2">
+              <ProductCard product={product} />
+            </div>
           ))}
         </Carousel>
       </Container>

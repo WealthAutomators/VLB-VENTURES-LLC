@@ -42,150 +42,162 @@ export function SiteHeader() {
   }, [mobileOpen, searchOpen]);
 
   const elevated = scrolled || mobileOpen || !isHome;
+  const onHero = isHome && !elevated;
 
   return (
     <>
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-          scrolled ? "px-3 pt-2 sm:px-4 sm:pt-2.5 md:px-6" : "px-3 pt-3 sm:px-4 sm:pt-4 md:px-6"
+          elevated
+            ? "border-b border-border bg-white/95 shadow-sm backdrop-blur-md"
+            : "border-b border-transparent bg-transparent"
         )}
       >
-        <Container className="!px-0">
+        <Container>
           <div
             className={cn(
-              "overflow-hidden rounded-full border transition-all duration-300",
-              elevated
-                ? "border-white/50 bg-white/80 shadow-lg shadow-primary/10 backdrop-blur-2xl"
-                : "border-white/40 bg-white/40 shadow-md shadow-primary/5 backdrop-blur-xl",
-              mobileOpen && "rounded-3xl sm:rounded-full"
+              "relative flex items-center transition-all duration-300",
+              scrolled ? "h-14 sm:h-16" : "h-16 sm:h-[72px]"
             )}
           >
-            <div
-              className={cn(
-                "relative flex items-center px-4 transition-all duration-300 sm:px-5 lg:px-6",
-                scrolled ? "h-12 sm:h-[52px]" : "h-14 sm:h-16"
-              )}
-            >
-              <Link href="/" className="relative z-10 shrink-0">
-                <Image
-                  src="/logo/logo.svg"
-                  alt={company.name}
-                  width={220}
-                  height={40}
-                  priority
+            <Link href="/" className="relative z-10 shrink-0">
+              <Image
+                src="/logo/logo.svg"
+                alt={company.name}
+                width={220}
+                height={40}
+                priority
+                className={cn(
+                  "w-auto transition-all duration-300",
+                  scrolled ? "h-7 sm:h-8" : "h-8 sm:h-9",
+                  onHero && "brightness-0 invert"
+                )}
+              />
+            </Link>
+
+            <nav className="absolute inset-x-0 hidden items-center justify-center gap-1 lg:flex">
+              {[...leftNavLinks, ...rightNavLinks].map((link) => (
+                <Link
+                  key={link.href + link.label}
+                  href={link.href}
                   className={cn(
-                    "w-auto transition-all duration-300",
-                    scrolled ? "h-6 sm:h-7" : "h-7 sm:h-8"
+                    "px-3 py-1.5 text-[13px] font-medium tracking-wide transition-colors",
+                    onHero
+                      ? "text-white/85 hover:text-white"
+                      : "text-foreground/70 hover:text-primary",
+                    pathname === link.href && (onHero ? "text-white" : "text-primary")
                   )}
-                />
-              </Link>
-
-              <nav className="absolute inset-x-0 hidden items-center justify-center gap-0.5 lg:flex">
-                {[...leftNavLinks, ...rightNavLinks].map((link) => (
-                  <Link
-                    key={link.href + link.label}
-                    href={link.href}
-                    className={cn(
-                      "rounded-full px-3 py-1.5 text-[13px] font-medium tracking-wide text-foreground/75 transition-colors hover:bg-primary/8 hover:text-primary",
-                      pathname === link.href && "bg-primary/8 text-primary"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-
-              <div className="ml-auto flex items-center gap-0.5">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-9 w-9 rounded-full text-foreground"
-                  onClick={() => setSearchOpen(true)}
-                  aria-label="Search"
                 >
-                  <Search className="h-[18px] w-[18px]" />
-                </Button>
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
 
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  asChild
-                  className="relative h-9 w-9 rounded-full text-foreground"
-                >
-                  <Link href="/wishlist" aria-label="Wishlist">
-                    <Heart className="h-[18px] w-[18px]" />
-                    {wishlist.length > 0 && (
-                      <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-white">
-                        {wishlist.length}
-                      </span>
-                    )}
-                  </Link>
-                </Button>
+            <div className="ml-auto flex items-center gap-0.5">
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "h-9 w-9",
+                  onHero ? "text-white hover:bg-white/15 hover:text-white" : "text-foreground"
+                )}
+                onClick={() => setSearchOpen(true)}
+                aria-label="Search"
+              >
+                <Search className="h-[18px] w-[18px]" />
+              </Button>
 
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  asChild
-                  className="hidden h-9 w-9 rounded-full text-foreground sm:inline-flex"
-                >
-                  <Link href="/profile" aria-label="Account">
-                    <User className="h-[18px] w-[18px]" />
-                  </Link>
-                </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className={cn(
+                  "relative h-9 w-9",
+                  onHero ? "text-white hover:bg-white/15 hover:text-white" : "text-foreground"
+                )}
+              >
+                <Link href="/wishlist" aria-label="Wishlist">
+                  <Heart className="h-[18px] w-[18px]" />
+                  {wishlist.length > 0 && (
+                    <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-accent text-[10px] font-bold text-white">
+                      {wishlist.length}
+                    </span>
+                  )}
+                </Link>
+              </Button>
 
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  asChild
-                  className="relative h-9 w-9 rounded-full text-foreground"
-                >
-                  <Link href="/cart" aria-label="Cart">
-                    <ShoppingBag className="h-[18px] w-[18px]" />
-                    {itemCount > 0 && (
-                      <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">
-                        {itemCount}
-                      </span>
-                    )}
-                  </Link>
-                </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className={cn(
+                  "hidden h-9 w-9 sm:inline-flex",
+                  onHero ? "text-white hover:bg-white/15 hover:text-white" : "text-foreground"
+                )}
+              >
+                <Link href="/profile" aria-label="Account">
+                  <User className="h-[18px] w-[18px]" />
+                </Link>
+              </Button>
 
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-9 w-9 rounded-full text-foreground lg:hidden"
-                  onClick={() => setMobileOpen((o) => !o)}
-                  aria-label={mobileOpen ? "Close menu" : "Open menu"}
-                >
-                  {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                </Button>
-              </div>
+              <Button
+                variant="ghost"
+                size="icon"
+                asChild
+                className={cn(
+                  "relative h-9 w-9",
+                  onHero ? "text-white hover:bg-white/15 hover:text-white" : "text-foreground"
+                )}
+              >
+                <Link href="/cart" aria-label="Cart">
+                  <ShoppingBag className="h-[18px] w-[18px]" />
+                  {itemCount > 0 && (
+                    <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">
+                      {itemCount}
+                    </span>
+                  )}
+                </Link>
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "h-9 w-9 lg:hidden",
+                  onHero ? "text-white hover:bg-white/15 hover:text-white" : "text-foreground"
+                )}
+                onClick={() => setMobileOpen((o) => !o)}
+                aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              >
+                {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
             </div>
-
-            {mobileOpen && (
-              <div className="border-t border-white/40 bg-white/95 px-4 py-5 backdrop-blur-xl lg:hidden">
-                <ul className="space-y-1">
-                  {navigationLinks.map((link) => (
-                    <li key={link.href + link.label}>
-                      <Link
-                        href={link.href}
-                        className="block rounded-xl px-3 py-3 text-sm font-medium text-foreground transition-colors hover:bg-primary/5 hover:text-primary"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
+
+          {mobileOpen && (
+            <div className="border-t border-border bg-white px-1 py-5 lg:hidden">
+              <ul className="space-y-1">
+                {navigationLinks.map((link) => (
+                  <li key={link.href + link.label}>
+                    <Link
+                      href={link.href}
+                      className="block rounded-lg px-3 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted hover:text-primary"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </Container>
       </header>
 
       <FullscreenSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
 
-      {!isHome && <div className="h-[76px] sm:h-[88px]" aria-hidden />}
+      {!isHome && <div className="h-16 sm:h-[72px]" aria-hidden />}
     </>
   );
 }

@@ -58,7 +58,7 @@ export function CategoryCarousel() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/55 via-foreground/10 to-transparent" />
                 <div className="absolute inset-x-3 bottom-3">
-                  <div className="glass-panel flex items-center justify-between gap-3 rounded-2xl px-4 py-3">
+                  <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3">
                     <div className="min-w-0">
                       <h3 className="font-display truncate text-base font-semibold tracking-tight text-foreground">
                         {category.name}

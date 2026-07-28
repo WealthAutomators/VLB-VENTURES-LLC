@@ -26,16 +26,15 @@ export default function AboutPage() {
           </div>
           <PageSection title="Our Story">
             <p>
-              {company.name} was founded with a simple mission: deliver premium shopping
-              seamlessly through a modern boutique marketplace. From electronics and smart
-              home tools to beauty, fashion, and lifestyle essentials — we select products that
-              balance performance, design, and lasting quality.
+              {company.name} was founded with a clear mission: elevate everyday shopping through
+              thoughtful curation. From electronics and home essentials to beauty, fashion, and
+              lifestyle pieces — we select products that balance style, function, and lasting quality.
             </p>
             <p className="mt-4">
-              Based in Huntington Station, New York, we partner with trusted suppliers to offer premium
+              Based in Morristown, New Jersey, we partner with trusted suppliers to offer premium
               products without compromise. Every piece in our catalog is chosen with intention, and
-              our team is dedicated to making your shopping experience fast, polished, and seamless
-              from browsing to checkout.
+              our team is dedicated to making your shopping experience confident, polished, and
+              practical from browsing to checkout.
             </p>
           </PageSection>
         </div>

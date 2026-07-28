@@ -8,13 +8,13 @@ export const heroSlides: HeroSlide[] = [
   {
     id: "1",
     image: "/hero/hero-1.jpg",
-    headline: "The New Standard For Everyday Shopping.",
+    headline: "Designed For Modern Living.",
     description:
-      "Discover premium products across every category with a faster, cleaner and more enjoyable shopping experience.",
-    ctaText: "Shop Collection",
+      "Discover thoughtfully selected products that combine innovation, quality and timeless style.",
+    ctaText: "Explore Collection",
     ctaLink: "/shop",
-    secondaryCtaText: "Discover New Arrivals",
-    secondaryCtaLink: "/new-arrivals",
+    secondaryCtaText: "Shop Best Sellers",
+    secondaryCtaLink: "/best-sellers",
   },
 ];
 
@@ -48,31 +48,64 @@ export const features: Feature[] = [
 export const featuredCollections = [
   {
     id: "1",
-    title: "Smart Living",
-    subtitle: "Connected tech that simplifies your routine",
-    href: "/categories/electronics",
-    image: "/categories/electronics.jpg",
-  },
-  {
-    id: "2",
-    title: "Home Refresh",
-    subtitle: "Refined tools for modern spaces",
+    title: "Modern Home",
+    subtitle: "Refined pieces for elevated interiors",
     href: "/categories/home-kitchen",
     image: "/categories/home-kitchen.jpg",
   },
   {
+    id: "2",
+    title: "Workspace Essentials",
+    subtitle: "Tools that sharpen focus and flow",
+    href: "/categories/office-supplies",
+    image: "/categories/office-supplies.jpg",
+  },
+  {
     id: "3",
-    title: "Daily Essentials",
-    subtitle: "Beauty, wellness, and everyday rituals",
-    href: "/categories/beauty",
-    image: "/categories/beauty.jpg",
+    title: "Tech Favorites",
+    subtitle: "Smart devices with lasting design",
+    href: "/categories/electronics",
+    image: "/categories/electronics.jpg",
   },
   {
     id: "4",
-    title: "Work & Play",
-    subtitle: "Gear for desks, workouts, and downtime",
+    title: "Outdoor Living",
+    subtitle: "Gear for weekends beyond the walls",
+    href: "/categories/sports-outdoors",
+    image: "/categories/sports-outdoors.jpg",
+  },
+];
+
+export const lifestyleCards = [
+  {
+    id: "1",
+    title: "Work From Home",
     href: "/categories/office-supplies",
-    image: "/categories/office-supplies.jpg",
+    image: "/banners/lifestyle-wfh.jpg",
+  },
+  {
+    id: "2",
+    title: "Smart Living",
+    href: "/categories/electronics",
+    image: "/banners/lifestyle-smart.jpg",
+  },
+  {
+    id: "3",
+    title: "Healthy Living",
+    href: "/categories/health-wellness",
+    image: "/banners/lifestyle-health.jpg",
+  },
+  {
+    id: "4",
+    title: "Travel Essentials",
+    href: "/categories/fashion-accessories",
+    image: "/banners/lifestyle-travel.jpg",
+  },
+  {
+    id: "5",
+    title: "Outdoor Escape",
+    href: "/categories/sports-outdoors",
+    image: "/banners/lifestyle-outdoor.jpg",
   },
 ];
 
@@ -104,69 +137,69 @@ export const floatingPromos = [
 ];
 
 export const editorialBanner = {
-  title: "Designed Around Modern Living.",
+  title: "Where Style Meets Function.",
   description:
-    "Explore products that simplify work, home and everyday life.",
-  ctaText: "Browse Products",
-  ctaLink: "/shop",
+    "VLB Ventures curates products that balance quality, thoughtful design, and everyday practicality — so modern living feels effortless.",
+  ctaText: "Learn More",
+  ctaLink: "/about",
   image: "/banners/lifestyle.jpg",
 };
 
 export const dealsEndTime = new Date(Date.now() + 1000 * 60 * 60 * 18).toISOString();
 
 export const homepageDealsSlugs = [
-  "noise-cancelling-headphones",
-  "compact-espresso-maker",
-  "smart-body-scale",
+  "wireless-earbuds",
+  "gooseneck-pour-over-kettle",
+  "robot-vacuum-mini",
   "air-fryer",
   "gaming-headset",
-  "silk-pillowcase-duo",
+  "cashmere-throw-blanket",
 ] as const;
 
 export const homepageTrendingSlugs = [
-  "noise-cancelling-headphones",
-  "modular-desk-organizer",
-  "aluminum-laptop-stand",
-  "linen-duvet-cover",
-  "ceramic-pour-over-set",
-  "yoga-mat",
-  "bluetooth-speaker",
-  "ambient-desk-diffuser",
+  "sculptural-table-lamp",
+  "wireless-charging-desk-pad",
+  "brass-architect-desk-lamp",
+  "ceramic-dinnerware-set",
+  "leather-crossbody-bag",
+  "insulated-travel-tumbler",
+  "outdoor-picnic-hamper",
+  "soft-shell-performance-jacket",
 ] as const;
 
 export const homepageBestsellerSlugs = [
   "wireless-earbuds",
-  "matte-cookware-set",
   "electric-kettle",
-  "travel-weekender-bag",
+  "yoga-mat",
+  "aluminum-laptop-stand",
   "gaming-headset",
   "bath-towel-set",
-  "aluminum-laptop-stand",
   "dog-bed",
+  "bluetooth-speaker",
 ] as const;
 
 export const homepageFeaturedSlugs = [
-  "noise-cancelling-headphones",
-  "ceramic-pour-over-set",
-  "silk-pillowcase-duo",
-  "modular-desk-organizer",
-  "compact-espresso-maker",
-  "linen-duvet-cover",
-  "smart-body-scale",
-  "wireless-earbuds",
-  "travel-weekender-bag",
-  "yoga-mat",
+  "sculptural-table-lamp",
+  "walnut-serving-board",
+  "marble-soap-dispenser-set",
+  "wireless-charging-desk-pad",
+  "ceramic-dinnerware-set",
+  "leather-crossbody-bag",
+  "brass-architect-desk-lamp",
+  "cashmere-throw-blanket",
+  "outdoor-picnic-hamper",
+  "insulated-travel-tumbler",
 ] as const;
 
 export const homepageNewArrivalSlugs = [
-  "noise-cancelling-headphones",
-  "ceramic-pour-over-set",
-  "silk-pillowcase-duo",
-  "modular-desk-organizer",
-  "compact-espresso-maker",
-  "ambient-desk-diffuser",
-  "linen-duvet-cover",
-  "smart-body-scale",
+  "sculptural-table-lamp",
+  "cashmere-throw-blanket",
+  "wireless-charging-desk-pad",
+  "marble-soap-dispenser-set",
+  "gooseneck-pour-over-kettle",
+  "walnut-serving-board",
+  "ceramic-dinnerware-set",
+  "leather-crossbody-bag",
 ] as const;
 
 export const promotionalBanner: PromoBanner = {
@@ -196,9 +229,9 @@ export const bestSellerTabs = [
 ];
 
 export const newsletter = {
-  title: "Join Thousands Of Happy Customers",
+  title: "Stay Inspired.",
   description:
-    "Get exclusive launches, weekly deals and seasonal collections delivered directly to your inbox.",
+    "Subscribe to receive new collections, exclusive offers and curated recommendations.",
   placeholder: "Enter your email address",
   buttonText: "Subscribe",
 };
@@ -212,16 +245,16 @@ export const sortOptions = [
 ];
 
 export const aboutSection = {
-  title: "Built For Modern Life.",
+  title: "Where Style Meets Function.",
   description:
-    "DLKS E-COMM LLC exists for people who want premium products and everyday essentials to work together. We curate electronics, home tools, beauty, fashion, and lifestyle pieces that balance performance with elegance.",
+    "VLB Ventures is a marketplace focused on quality, thoughtful curation, and everyday practicality. We bring together refined products that elevate how you live, work, and unwind — without compromising on design or durability.",
   checklist: [
-    "Premium curation across every category",
-    "Quality-first selection over endless inventory",
-    "Products designed for clarity, comfort, and style",
-    "A shopping experience built around seamless delivery",
+    "Curated for quality over quantity",
+    "Design that earns its place in daily life",
+    "Practical performance with lasting style",
+    "A shopping experience built for modern living",
   ],
-  buttonText: "Shop Now",
-  buttonLink: "/shop",
+  buttonText: "Learn More",
+  buttonLink: "/about",
   image: "/banners/about.jpg",
 };

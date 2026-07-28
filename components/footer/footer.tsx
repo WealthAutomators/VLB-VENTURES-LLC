@@ -7,9 +7,9 @@ import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
-    <footer className="border-t border-primary/8 bg-white/60 backdrop-blur-sm">
-      <Container className="py-20 md:py-24">
-        <div className="mb-14">
+    <footer className="border-t border-border bg-white">
+      <Container className="py-16 md:py-20">
+        <div className="mb-12">
           <Image
             src="/logo/logo.svg"
             alt={company.name}
@@ -22,7 +22,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div>
             <h3 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground">
               Shop
@@ -110,7 +110,7 @@ export function Footer() {
         </div>
       </Container>
 
-      <Separator className="bg-primary/8" />
+      <Separator className="bg-border" />
 
       <Container className="flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
         <p className="text-sm text-muted-foreground">{company.copyright}</p>

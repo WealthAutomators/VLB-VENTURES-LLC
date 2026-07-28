@@ -38,7 +38,7 @@ export function FloatingPromoCards() {
             >
               <Link
                 href={promo.href}
-                className="glass-panel group block overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-primary/12"
+                className="group block overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image

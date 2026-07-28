@@ -2,14 +2,14 @@ import { NavLink } from "@/types";
 
 export const leftNavLinks: NavLink[] = [
   { label: "Home", href: "/" },
+  { label: "Shop", href: "/shop" },
   { label: "Collections", href: "/categories" },
-  { label: "Featured", href: "/shop?sort=featured" },
-  { label: "Deals", href: "/shop?sort=sale" },
+  { label: "New Arrivals", href: "/new-arrivals" },
 ];
 
 export const rightNavLinks: NavLink[] = [
-  { label: "New Arrivals", href: "/new-arrivals" },
-  { label: "Support", href: "/faq" },
+  { label: "Brands", href: "/shop?sort=featured" },
+  { label: "Journal", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 

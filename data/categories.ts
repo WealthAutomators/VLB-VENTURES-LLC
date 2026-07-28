@@ -17,9 +17,9 @@ export const categories: Category[] = [
   {
     id: "2",
     slug: "home-kitchen",
-    name: "Home",
+    name: "Home & Kitchen",
     image: "/categories/home-kitchen.jpg",
-    description: "Appliances and tools to make home life easier.",
+    description: "Appliances, décor, and tools for modern kitchens and living spaces.",
     productCount: countFor("home-kitchen"),
   },
   {

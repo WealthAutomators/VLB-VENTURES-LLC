@@ -38,7 +38,7 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
   return (
     <>
       <motion.div
-        className={cn("group relative flex flex-col", className)}
+        className={cn("group relative flex flex-col transition-transform duration-300 hover:-translate-y-1", className)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         initial={{ opacity: 0, y: 12 }}
@@ -46,7 +46,7 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
       >
-        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted shadow-sm shadow-primary/5">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-muted transition-shadow duration-300 group-hover:shadow-lg">
           <Link href={`/product/${product.slug}`} className="block h-full w-full">
             <Image
               src={product.images[0]}
@@ -126,7 +126,7 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
               ) : (
                 <>
                   <ShoppingBag className="h-4 w-4" />
-                  Add to Cart
+                  Quick Add
                 </>
               )}
             </Button>
@@ -135,7 +135,7 @@ export const ProductCard = memo(function ProductCard({ product, className }: Pro
 
         <div className="mt-5 flex flex-1 flex-col gap-1">
           <Link href={`/product/${product.slug}`}>
-            <h3 className="text-[15px] font-medium leading-snug tracking-tight text-foreground transition-colors hover:text-secondary line-clamp-2">
+            <h3 className="text-[15px] font-medium leading-snug tracking-tight text-foreground transition-colors hover:text-primary line-clamp-2">
               {product.name}
             </h3>
           </Link>

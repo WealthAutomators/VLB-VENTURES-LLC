@@ -1,43 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="280" height="48" viewBox="0 0 280 48" fill="none">
-  <!-- Glass orb with D monogram -->
-  <defs>
-    <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4338CA"/>
-      <stop offset="100%" stop-color="#9333EA"/>
-    </linearGradient>
-    <linearGradient id="orbShine" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.25"/>
-    </linearGradient>
-  </defs>
-  <circle cx="24" cy="24" r="20" fill="url(#orbGrad)"/>
-  <circle cx="24" cy="24" r="20" fill="url(#orbShine)"/>
-  <circle cx="24" cy="24" r="19" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/>
-  <!-- Aqua highlight accent -->
-  <circle cx="14" cy="12" r="3.5" fill="#06B6D4" opacity="0.55"/>
-  <!-- D monogram -->
+  <!-- Geometric VLB monogram -->
+  <rect x="2" y="4" width="40" height="40" rx="2" stroke="#1F2937" stroke-width="1.5" fill="none"/>
   <path
-    d="M16 14.5 H22.5 C27.2 14.5 30.5 17.8 30.5 24 C30.5 30.2 27.2 33.5 22.5 33.5 H16 V14.5 Z M19.2 17.7 V30.3 H22.3 C25.3 30.3 27.3 27.6 27.3 24 C27.3 20.4 25.3 17.7 22.3 17.7 H19.2 Z"
-    fill="#FFFFFF"
+    d="M10 14 L16 34 L22 14"
+    stroke="#1F2937"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <path
+    d="M24 14 V34 M24 14 H32 C35.5 14 37.5 16.5 37.5 20 C37.5 23.5 35.5 26 32 26 H24"
+    stroke="#C89B5D"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
   />
   <!-- Wordmark -->
   <text
     x="54"
     y="20"
-    fill="#111827"
+    fill="#1F2937"
     font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-    font-size="15"
+    font-size="14"
     font-weight="700"
-    letter-spacing="2.2"
-  >DLKS E-COMM</text>
+    letter-spacing="2.4"
+  >VLB VENTURES</text>
   <text
     x="54"
     y="36"
-    fill="#4338CA"
+    fill="#C89B5D"
     font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     font-size="10"
     font-weight="600"
-    letter-spacing="3.5"
+    letter-spacing="4"
   >LLC</text>
 </svg>

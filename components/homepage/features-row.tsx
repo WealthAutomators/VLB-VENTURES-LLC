@@ -15,7 +15,7 @@ export function FeaturesRow() {
     <section className="py-24 md:py-32">
       <Container>
         <SectionHeading
-          title="Why Shop DLKS"
+          title="Why Shop VLB"
           subtitle="A marketplace built for speed, security, and premium everyday products."
           centered
         />
@@ -25,7 +25,7 @@ export function FeaturesRow() {
             return (
               <div
                 key={feature.id}
-                className="glass-panel rounded-3xl p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary/10"
+                className="rounded-xl border border-border bg-card p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white">
                   <Icon className="h-6 w-6" />

@@ -29,10 +29,10 @@ export function BestSellers() {
               key={tab.slug}
               onClick={() => setActiveTab(tab.slug)}
               className={cn(
-                "rounded-xl px-5 py-2 text-sm font-medium transition-colors",
+                "rounded-lg px-5 py-2 text-sm font-medium transition-colors",
                 activeTab === tab.slug
-                  ? "bg-primary text-white shadow-md shadow-primary/20"
-                  : "glass-panel text-foreground hover:bg-primary hover:text-white"
+                  ? "bg-primary text-white"
+                  : "border border-border bg-white text-foreground hover:bg-primary hover:text-white"
               )}
             >
               {tab.label}

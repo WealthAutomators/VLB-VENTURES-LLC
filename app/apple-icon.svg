@@ -1,14 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" fill="none">
-  <defs>
-    <linearGradient id="appleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4338CA"/>
-      <stop offset="100%" stop-color="#9333EA"/>
-    </linearGradient>
-  </defs>
-  <rect width="180" height="180" rx="40" fill="url(#appleGrad)"/>
+  <rect width="180" height="180" rx="28" fill="#1F2937"/>
   <path
-    d="M48 42 H90 C124 42 146 64 146 96 C146 128 124 150 90 150 H48 V42 Z M68 62 V130 H88 C110 130 124 114 124 96 C124 78 110 62 88 62 H68 Z"
-    fill="#FFFFFF"
+    d="M40 48 L68 132 L96 48"
+    stroke="#FFFFFF"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
   />
-  <circle cx="138" cy="48" r="12" fill="#06B6D4"/>
+  <path
+    d="M108 48 V132 M108 48 H142 C156 48 164 58 164 72 C164 86 156 96 142 96 H108"
+    stroke="#C89B5D"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
 </svg>
