@@ -90,3 +90,11 @@ body {
 .section-muted {
   background: var(--muted);
 }
+
+/* mobile-overflow-guard */
+@layer base {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
